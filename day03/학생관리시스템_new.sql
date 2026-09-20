@@ -1,5 +1,7 @@
--- 학생 수강관리 시스템 
-DROP TABLE "students";
+-- 학생 수강관리 시스템
+DROP TABLE if exists "enrollments";
+DROP TABLE if exists "courses";
+DROP table if EXISTS "students";
 
 CREATE TABLE "students" (
 	"id"	int	    generated always as identity	NOT NULL,
@@ -10,21 +12,19 @@ CREATE TABLE "students" (
 	"created_at"	timestamp	DEFAULT current_timestamp	NULL
 );
 
-DROP TABLE "courses";
-
 CREATE TABLE "courses" (
 	"id"	int		generated always as identity NOT NULL,
 	"title"	varchar(100)		NULL,
 	"instructor"	varchar(50)		NULL,
 	"hours"	int		NULL,
-	"created_at"	timestamp		NULL
+	"created_at"	timestamp	DEFAULT current_timestamp	NULL
 );
 
-DROP TABLE "enrollments";
+
 
 CREATE TABLE "enrollments" (
 	"id"	int		generated always as identity NOT NULL,
-	"enrolled_at"	timestamp		NULL,
+	"enrolled_at"	timestamp	DEFAULT current_timestamp	NULL,
 	"student_id"	int		NOT NULL,
 	"course_id"	int		NOT NULL
 );
