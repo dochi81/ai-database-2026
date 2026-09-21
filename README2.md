@@ -134,7 +134,6 @@ FastAPI는 주소와 HTTP 메소드도 파악필요
 
 
 
-
 ### HTTP Exception
 - API상에 오류가 발생하면 오류 (예외)처리를 진행
 
