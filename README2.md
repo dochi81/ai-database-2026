@@ -1,6 +1,4 @@
-#### 
-
-개요
+### 개요
 
 - tFastAPI - Python으로 API서버를 만드는 웹 프레임워크
 - API - Application programing interface
@@ -87,7 +85,9 @@ http://127.0.0.1:8000 메세지ㅣ 확인
 ### Swagger UI 확인
 
 - FastAPI에서 자동으로 제공되는 API테스트 페이지
-- API의 결과는 json 타입 (문자열 일반적으로 "로 표현). 파이썬 '디셔너리로 표현하는 것과 차이점
+
+********************************************
+- API의 결과는 json 타입 (문자열 일반적으로 "로 표현). 파이썬 '딕셔너리로 표현하는 것과 차이점
 
 ### URL경로
 
@@ -99,3 +99,46 @@ http://127.0.0.1:8000 메세지ㅣ 확인
 - /students - 추가 URT. 경로파라미터
 - /?key=value -URL 경로 GET 쿼리 파라미터
 
+### HTTP(S) 메서드
+
+FastAPI는 주소와 HTTP 메소드도 파악필요
+
+-GET메서드 외에는 Sweager 메서드에서 테스트 해야함 post, put , patch, delete
+
+
+
+
+
+
+
+
+### 요청본문
+
+- post나 patch 요청시는 클라이언트가 json으로 데이터를 서버에 전달해야 함. 그 데이터를 등록 또는 수정
+- FastAPI에서는 Pydantic 패키지 모델을 사용
+- JSON데이터이므로 파이썬 None 대신 null로 사용
+- } 닫기 전, 는 제거 {파이썬은 허용}
+
+#### 메모리 기반(DB x) 학생 예제
+
+- DAY05/memorydb_py
+  -get method 함수 내용 생략
+
+### POST학생 정보 생성
+
+- POST 메서드 작성
+
+### request body
+
+
+
+
+
+
+### HTTP Exception
+- API상에 오류가 발생하면 오류 (예외)처리를 진행
+
+상태코드 / 의미
+200,201 / 요청 성공, 생성성공
+403,404 / 권한 없음, 데이터 없음
+500     / 서버 오류
