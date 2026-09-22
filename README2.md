@@ -1,6 +1,6 @@
 ### 개요
 
-- tFastAPI - Python으로 API서버를 만드는 웹 프레임워크
+- FastAPI - Python으로 API서버를 만드는 웹 프레임워크
 - API - Application programing interface
 - 사용자 (클라이언트)가 웹, 모바일, 앱에서 요청을 하면 FastAPI 서버가 요청을 처리, 결과를 돌려줌
 - JSON 타입(파이썬 딕셔너리와 유사)으로 결과 리턴
