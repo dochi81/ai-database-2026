@@ -178,4 +178,39 @@ pip install -r requirements.txt
 
 
 ### main.py
-- database.py를
+- database.py를 db 연동결과 
+
+### 디버깅
+
+- Debug - 버그를 고치는 작업
+- 소스코드 작성에 60% 디버그 40% 시간소요
+- 디버그 단축키
+- F5: 디버그 실행
+- F9: 브레이크 포인트 토글
+- F10: 한 단계씩 실행(함수 패스)
+- F11: 한 단계씩 실행(함수내 진입)
+
+
+### FastAPI 디버깅
+ - 기존 FastAPI 소스코드 외 아래의 디버그 코드 추가
+
+ python
+ import uvicorn
+
+ # 기존코드 생략
+ 
+if_name_=='__main__':
+uviconrn.run(
+  'main.app',
+  hots= '127.0.0.1',
+  port= 8000
+  reload=True,
+  log_level='debug'
+)
+
+- F5(디버그 모드)로 실행
+- 디버깅 필요한 함수나 로직에 F9로 종단점 (BREAK POINT)활성화
+- 로직 실행하면 종단점에 일시 중단
+- F18 또는 F11로 한줄씩 실행하면서 로직 처리 결과 모니터링, 조사식과 변수에서 데이터 확인
+- 오류 로직 찾아서 수정
+- 다시 디버깅으로 정상동작 확인하고 완료

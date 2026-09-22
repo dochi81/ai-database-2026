@@ -1,4 +1,4 @@
-
+#함수선언 (함수가 어떻게 구성되었다)
 def sayHello(name):
     print(f'안녕하세요~{name}님')
 

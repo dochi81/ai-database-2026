@@ -1,7 +1,8 @@
 # day05 main.py , memory.py와 동일 +DB처리 추가
-
+import uvicorn
 from fastapi import FastAPI,HTTPException
 from pydantic import BaseModel 
+
 
 # 우리가 만든 database.py
 from database import get_connection
@@ -173,9 +174,21 @@ def delete_student(id:int):
     finally:
         cursor.close()
         conn.close()
-        
 
 
 
+# 디버깅시 추가할 것
+# 디버깅 잘하려면 구구단 디버깅 해볼것
+
+
+if __name__ == '__main__':
+
+    uvicorn.run(
+        'main_debug:app',
+        host='127.0.0.1',
+        port=8000, # 디버깅용 포트 변경
+        reload=True,
+        log_level='debug'
+    )
 
         
