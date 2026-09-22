@@ -141,4 +141,41 @@ FastAPI는 주소와 HTTP 메소드도 파악필요
 403,404 / 권한 없음, 데이터 없음
 500     / 서버 오류
 
-### 
+
+
+### DB연동 FastAPI (DAY-06)
+
+- 더 간단한 구조- 우선적으로 구현할 구조 
+
+fastapi_postgres/
+│
+
+├── main.py          # FastAPI 웹 서버
+
+└── database.py      # PostgreSQL 연결
+
+#### DB연동 파이썬 패키지 설치
+
+- psycopg 
+
+pip install psycopg[binary]
+
+- 내 개발환경 (파이썬 패키지)공유
+
+pip freeze > requirements.txt    requirements.txt 파일만 전달
+
+- 개발환경 재설치
+
+pip install -r requirements.txt
+
+#### 기존 PostgreSQL students 테이블 사용
+- 내용 생략
+
+
+### database.py
+- PostgresSQL데이터 베이스 연결용 소스코드
+- 소스
+
+
+### main.py
+- database.py를
