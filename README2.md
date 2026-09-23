@@ -86,7 +86,8 @@ http://127.0.0.1:8000 메세지ㅣ 확인
 
 - FastAPI에서 자동으로 제공되는 API테스트 페이지
 
-********************************************
+---
+
 - API의 결과는 json 타입 (문자열 일반적으로 "로 표현). 파이썬 '딕셔너리로 표현하는 것과 차이점
 
 ### URL경로
@@ -104,13 +105,6 @@ http://127.0.0.1:8000 메세지ㅣ 확인
 FastAPI는 주소와 HTTP 메소드도 파악필요
 
 -GET메서드 외에는 Sweager 메서드에서 테스트 해야함 post, put , patch, delete
-
-
-
-
-
-
-
 
 ### 요청본문
 
@@ -130,10 +124,8 @@ FastAPI는 주소와 HTTP 메소드도 파악필요
 
 ### request body
 
-
-
-
 ### HTTP Exception
+
 - API상에 오류가 발생하면 오류 (예외)처리를 진행
 
 상태코드 / 의미
@@ -141,11 +133,9 @@ FastAPI는 주소와 HTTP 메소드도 파악필요
 403,404 / 권한 없음, 데이터 없음
 500     / 서버 오류
 
-
-
 ### DB연동 FastAPI (DAY-06)
 
-- 더 간단한 구조- 우선적으로 구현할 구조 
+- 더 간단한 구조- 우선적으로 구현할 구조
 
 fastapi_postgres/
 │
@@ -156,7 +146,7 @@ fastapi_postgres/
 
 #### DB연동 파이썬 패키지 설치
 
-- psycopg 
+- psycopg
 
 pip install psycopg[binary]
 
@@ -169,16 +159,17 @@ pip freeze > requirements.txt    requirements.txt 파일만 전달
 pip install -r requirements.txt
 
 #### 기존 PostgreSQL students 테이블 사용
+
 - 내용 생략
 
-
 ### database.py
+
 - PostgresSQL데이터 베이스 연결용 소스코드
 - 소스
 
-
 ### main.py
-- database.py를 db 연동결과 
+
+- database.py를 db 연동결과
 
 ### 디버깅
 
@@ -190,22 +181,26 @@ pip install -r requirements.txt
 - F10: 한 단계씩 실행(함수 패스)
 - F11: 한 단계씩 실행(함수내 진입)
 
-
 ### FastAPI 디버깅
- - 기존 FastAPI 소스코드 외 아래의 디버그 코드 추가
 
- python
- import uvicorn
+- 기존 FastAPI 소스코드 외 아래의 디버그 코드 추가
 
- # 기존코드 생략
- 
+![](assets/20260923_085058_image.png)
+
+
+
+python
+import uvicorn
+
+# 기존코드 생략
+
 if_name_=='__main__':
 uviconrn.run(
-  'main.app',
-  hots= '127.0.0.1',
-  port= 8000
-  reload=True,
-  log_level='debug'
+'main.app',
+hots= '127.0.0.1',
+port= 8000
+reload=True,
+log_level='debug'
 )
 
 - F5(디버그 모드)로 실행
