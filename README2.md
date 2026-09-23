@@ -187,8 +187,6 @@ pip install -r requirements.txt
 
 ![](assets/20260923_085058_image.png)
 
-
-
 python
 import uvicorn
 
@@ -204,8 +202,23 @@ log_level='debug'
 )
 
 - F5(디버그 모드)로 실행
-- 디버깅 필요한 함수나 로직에 F9로 종단점 (BREAK POINT)활성화
+- 디버깅 필요한 함수나 로직에 `F9`로 종단점 (BREAK POINT)활성화
 - 로직 실행하면 종단점에 일시 중단
-- F18 또는 F11로 한줄씩 실행하면서 로직 처리 결과 모니터링, 조사식과 변수에서 데이터 확인
+- `F18` 또는 `F11`로 한줄씩 실행하면서 로직 처리 결과 모니터링, 조사식과 변수에서 데이터 확인
 - 오류 로직 찾아서 수정
 - 다시 디버깅으로 정상동작 확인하고 완료
+
+### FastAPI 추가학습 리스트
+
+### DB연동
+
+- `ORM` (Object-Relational Mapping) -SQL 쿼리 없이 파이썬 코딩만드로 DB CURD가 가능한 기술
+- SQL ALchemy 패키지 pop 설치 후 사용
+- `Docker` DB 컨테이너 연계
+
+### API서버 활용
+
+- 예외처리, 응답모델 정리 구조정리
+- API서버 프로젝트 구조화 - Python 파일 분리, 환경파일
+- 인증(로그인, 권한),`JWT` (JSON WEB TOKEN) 사용자 인증 - Oauth2.0 (구글, 네이버, 카카오 로그인 연계)
+- Docker로 배포
